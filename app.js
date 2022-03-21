@@ -12,7 +12,7 @@ const userRouter = require('./routes/user.routes');
 const pristRouter = require('./routes/prist.router');
 app.use(express.static(path.join(__dirname,'public')));
 
-
+// asdf
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(bodyparser.json());
 
