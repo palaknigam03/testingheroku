@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost:27017/worshipdb');
+mongoose.connect('mongodb+srv://root:root@cluster0.yozhs.mongodb.net/worship?retryWrites=true&w=majority');
 const port = process.env.PORT || 3000;
 const path = require('path');
 const app = express();
