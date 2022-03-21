@@ -2,6 +2,7 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const mongoose = require("mongoose");
 mongoose.connect('mongodb://localhost:27017/worshipdb');
+const port = process.env.PORT || 3000;
 const path = require('path');
 const app = express();
 const AdminRouter = require('./routes/admin.routes');
@@ -22,6 +23,6 @@ app.use("/api/user",userRouter);
 app.use("/api/prist",pristRouter);
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("Server Is Running...");
 });
